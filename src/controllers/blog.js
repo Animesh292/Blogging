@@ -3,7 +3,7 @@ const Comment = require("../models/comment");
 const express = require("express");
 
 async function handleNewBlog(req, res) {
-  return res.render("addBlog", {
+  return res.render("addBlog.ejs", {
     user: req.user,
   });
 }
@@ -25,7 +25,7 @@ async function handleViewBlogById(req, res) {
     "createdBy"
   );
   console.log("comments", comments);
-  return res.render("blog", {
+  return res.render("blog.ejs", {
     user: req.user,
     blog,
     comments,

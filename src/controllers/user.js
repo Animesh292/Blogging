@@ -1,10 +1,11 @@
 const User = require("../models/user");
+// const path = require("path");
 
 async function handleSignIn(req, res) {
-  return res.render("Signin");
+  return res.render("signin.ejs");
 }
 async function handleSignUp(req, res) {
-  return res.render("SignUp");
+  return res.render("signup.ejs");
 }
 
 async function handleSignInToAcc(req, res) {
