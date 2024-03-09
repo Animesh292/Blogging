@@ -17,7 +17,8 @@ mongoose
   .then((e) => console.log("MongoDB connected"));
 
 app.set("view engine", "ejs");
-app.set("views", path.resolve("./views"));
+// Set the views directory
+app.set("views", __dirname + "/views");
 
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
